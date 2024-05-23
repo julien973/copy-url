@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy URL</title>
+</head>
+<body>
+    <button id="copyButton">Copy Server URL</button>
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const url = '51.79.131.32:25565';
+            navigator.clipboard.writeText(url).then(function() {
+                alert('Server URL copied to clipboard!');
+            }, function(err) {
+                alert('Could not copy text: ', err);
+            });
+        });
+    </script>
+</body>
+</html>
+Add index.html
